@@ -33,7 +33,7 @@ export default function BasketCard({ el, toFavorite, setProducts }) {
     products = products.map(old => old.guid == el.guid ? { ...old, quantity: quantity } : old)
     setProducts(products)
     localStorage.setItem('products', JSON.stringify(products))
-  }, [quantity])
+  }, [])
 
   useEffect(() => {
     let tofavoriteProducts = JSON.parse(localStorage.getItem('toFavorites')) || []
