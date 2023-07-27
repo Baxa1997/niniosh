@@ -1,18 +1,18 @@
 import httpRequest from './httpRequest'
 import { useQuery } from 'react-query'
 
-const ``Service = {
+const Service = {
 	getList: (params) => httpRequest.get('``', { params }),
 }
 
-export const use``sQuery = ({ params = {}, queryParams } = {}) => {
+export const usesQuery = ({ params = {}, queryParams } = {}) => {
 	return useQuery(
 		['``', params],
 		() => {
-			return ``Service.getList(params)
+			return Service.getList(params)
 		},
 		queryParams
 	)
 }
 
-export default ``Service
+export default Service
